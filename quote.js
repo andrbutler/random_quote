@@ -1,4 +1,4 @@
-var qoutes = [
+var quotes = [
  ['"The only thing that makes life possible is permanent, intolerable uncertainty; not knowing what comes next."', '-Ursula K. Le Guin'],
  ['"If you spend too much time thinking about a thing, you\'ll never get it done."', '-Bruce Lee'], 
  ['"They teach you there\'s a boundary line to music. But, man, there\'s no boundary line to art"', '-Charlie Parker'], 
@@ -10,12 +10,12 @@ var qoutes = [
  ['"I learned a long time ago that reality was much weirder than anyone\'s imagination."', '-Hunter S. Thompson'], 
  ['"There is only a finger\'s difference between a wise man and a fool."', '-Diogenes'], 
  ];
-function getQoute(){
-	var x = Math.floor(Math.random() * qoutes.length);
-	var qouteOut = qoutes[x][0];
-	var authorOut = qoutes[x][1];
-	var tweet = qouteOut + " " +authorOut;
-	$('.qoute').text(qouteOut);
+function getQuote(){
+	var x = Math.floor(Math.random() * quotes.length);
+	var quoteOut = quotes[x][0];
+	var authorOut = quotes[x][1];
+	var tweet = quoteOut + " " +authorOut;
+	$('.quote').text(quoteOut);
 	$('h2.author').text(authorOut);
 	tweet = tweet.replace(';' ,'%3B');
 	$('.tweet').attr
@@ -30,6 +30,6 @@ function getColor(){
 }
 $(document).ready(function() {
 
-$('button').on('click.cQoute', getQoute);
-$('button').on('click.cQoute', getColor);
+$('button').on('click.cQuote', getQuote);
+$('button').on('click.cQuote', getColor);
 });
